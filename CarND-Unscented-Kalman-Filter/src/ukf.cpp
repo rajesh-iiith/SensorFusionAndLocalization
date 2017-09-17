@@ -84,7 +84,7 @@ UKF::~UKF() {}
 /**
  * @param {MatrixXd} Xsig_out The sigma points matrix to be augmented.
  */
-MatrixXd UKF::AugmentedSigmaPoints() {
+MatrixXd UKF::GenerateAugmentedSigmaPoints() {
 
   //create augmented mean vector
   VectorXd x_aug = VectorXd(n_aug_);
@@ -125,7 +125,7 @@ MatrixXd UKF::AugmentedSigmaPoints() {
  * @param {MatrixXd} Xsig_aug The augmented sigma points to be precessed.
  * @param {double} delta_t The time elapsed since last measurement.
  */
-void UKF::SigmaPointPrediction(MatrixXd Xsig_aug, double delta_t) {
+void UKF::PredictSigmaPoints(MatrixXd Xsig_aug, double delta_t) {
 
   //predict sigma points
   //avoid division by zero
@@ -402,14 +402,11 @@ void UKF::Prediction(double delta_t) {
   vector, x_. Predict sigma points, the state, and the state covariance matrix.
   */
 
-  //generate sigma points
-  // MatrixXd Xsig = GenerateSigmaPoints();
-
-  //augmented sigma points
-  MatrixXd Xsig_aug = AugmentedSigmaPoints();
+  //generate augmented sigma points
+  MatrixXd Xsig_aug = GenerateAugmentedSigmaPoints();
 
   //predict sigma points
-  SigmaPointPrediction(Xsig_aug, delta_t);
+  PredictSigmaPoints(Xsig_aug, delta_t);
 
   //predict state mean and state covariance matrix
   PredictMeanAndCovariance();

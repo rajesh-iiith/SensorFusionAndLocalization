@@ -92,14 +92,14 @@ public:
    * Augments Sigma Points
    * @param {MatrixXd} Xsig_out The sigma points matrix to be augmented.
    */
-  MatrixXd AugmentedSigmaPoints();
+  MatrixXd GenerateAugmentedSigmaPoints();
 
   /**
    * Sigma Point Prediction
    * @param {MatrixXd} Xsig_aug The augmented sigma points to be precessed.
    * @param {double} delta_t The time elapsed since last measurement.
    */
-  void SigmaPointPrediction(MatrixXd Xsig_aug, double delta_t);
+  void PredictSigmaPoints(MatrixXd Xsig_aug, double delta_t);
 
   /**
    * Predict Mean And Covariance
