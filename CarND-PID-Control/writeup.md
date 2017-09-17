@@ -9,8 +9,8 @@
 ### Selection of Hyperparameters:
 
 To get an intuitive understanding of the importance of the different components, I decided to tune the parameters manually. 
-* Started with a K<sub>p<sub> value, setting K<sub>i<sub> and K<sub>d<sub> = 0
-* I kept increasing K<sub>d<sub> until oscillations were reasonably reduced.
-* If car going outside permissbile region then alter K<sub>p<sub> and K<sub>i<sub> (increase if cause is slow reactivity, reduce if cause is oscillation).
+* Started with a K<sub>p</sub> value, setting K<sub>i</sub> and K<sub>d</sub> = 0
+* I kept increasing K<sub>d</sub> until oscillations were reasonably reduced.
+* If car going outside permissbile region then alter K<sub>p</sub> and K<sub>i</sub> (increase if cause is slow reactivity, reduce if cause is oscillation).
 
-I finally achieved reasonably good results with K<sub>p<sub> = 0.11, K<sub>i<sub> = 0, K<sub>d<sub> = 2.5. 
+I finally achieved reasonably good results with K<sub>p</sub> = 0.11, K<sub>i</sub> = 0, K<sub>d</sub> = 2.5. 
