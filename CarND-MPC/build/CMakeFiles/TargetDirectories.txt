@@ -1,0 +1,3 @@
+/mnt/c/myZone/myCode/SDCND/SensorFusionAndLocalization/CarND-MPC/build/CMakeFiles/edit_cache.dir
+/mnt/c/myZone/myCode/SDCND/SensorFusionAndLocalization/CarND-MPC/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/myZone/myCode/SDCND/SensorFusionAndLocalization/CarND-MPC/build/CMakeFiles/mpc.dir
